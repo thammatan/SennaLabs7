@@ -1,0 +1,5 @@
+SELECT Persons.name , COUNT(*) 
+FROM Persons,Cars
+INNER JOIN PersonsJoinCars ON PersonsJoinCars.personsid=Persons.id AND PersonsJoinCars.carsid=Cars.ID
+GROUP BY Persons.id
+HAVING COUNT(*) > 2
